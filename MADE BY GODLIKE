@@ -7,11 +7,11 @@ local window = library:AddWindow("MoonHub-Elerium-Paid", {
 })
 
 --- Main Tab
-local Main = window:AddTab("Main")  -- Changed from Window to window to use the correct variable
+local Main = window:AddTab("Main")  
 
-local Founter = Main:AddFolder("Misc")-- Fixed 'Local' to 'local', and 'AddFoulder' to 'AddFolder'
+local Folder = Main:AddFolder("Misc") -- Changed 'Founter' to 'Folder' and fixed 'AddFoulder' to 'AddFolder'
 
-Local Folder.Misc:AddToggle("DestroyAdPortal", { 
+Folder:AddToggle("DestroyAdPortal", { 
     Title = "Destroy AD portal", 
     Description = "This destroys the annoying ad portal", 
     Default = false, 
@@ -29,5 +29,4 @@ Local Folder.Misc:AddToggle("DestroyAdPortal", {
             print("Ad portal toggle OFF") 
         end 
     end 
-}) 
-
+})
