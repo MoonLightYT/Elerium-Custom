@@ -9,6 +9,14 @@ local window = library:AddWindow("MoonHub-Elerium-Paid", {
 --- Main Tab
 local Main = window:AddTab("Main")  -- Changed from Window to window to use the correct variable
 
-local Founter = Main:AddFolder("Misc")  -- Fixed 'Local' to 'local', and 'AddFoulder' to 'AddFolder'
+local Founter = Main:AddFolder("Misc")-- Fixed 'Local' to 'local', and 'AddFoulder' to 'AddFolder'
+
+local destroyadportal = false
+folder1:AddButton("Destroy AD portal", function()
+    local part = workspace:FindFirstChild("RobloxForwardPortals")
+    if part then
+        part:Destroy()
+    end
+end)
 
 
