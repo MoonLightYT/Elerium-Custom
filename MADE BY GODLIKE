@@ -11,9 +11,4 @@ local Main = window:AddTab("Main")  -- Changed from Window to window to use the 
 
 local Founter = Main:AddFolder("Misc")  -- Fixed 'Local' to 'local', and 'AddFoulder' to 'AddFolder'
 
-Founter:AddButton("Destroy AD Portal", function()  -- Fixed 'Foulder2' to 'Founter'
-    local part = workspace:FindFirstChild("RobloxForwardPortals")
-    if part then
-        part:Destroy()
-    end
-end)
+
