@@ -11,10 +11,23 @@ local Main = window:AddTab("Main")  -- Changed from Window to window to use the 
 
 local Founter = Main:AddFolder("Misc")-- Fixed 'Local' to 'local', and 'AddFoulder' to 'AddFolder'
 
-Tabs.Main:AddToggle("DestroyAdPortal", 
-{
-     
-     Title = "Destroy AD Portal",
-     Description = "This destroys the annoying game teleporter
-
+Local Folder.Misc:AddToggle("DestroyAdPortal", { 
+    Title = "Destroy AD portal", 
+    Description = "This destroys the annoying ad portal", 
+    Default = false, 
+    Callback = function(state) 
+        if state then 
+            print("Ad portal toggle ON") 
+            local part = workspace:FindFirstChild("RobloxForwardPortals") 
+            if part then 
+                part:Destroy() 
+                print("Ad portal destroyed.") 
+            else 
+                print("No ad portal found.") 
+            end 
+        else 
+            print("Ad portal toggle OFF") 
+        end 
+    end 
+}) 
 
